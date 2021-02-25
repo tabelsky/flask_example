@@ -15,7 +15,7 @@ def validate(source: str, req_schema: dict):
                     instance=getattr(request, source), schema=req_schema,
                 )
             except jsonschema.ValidationError as e:
-                raise errors.ValidationError
+                raise errors.BadLuck
 
             result = func(*args, **kwargs)
 

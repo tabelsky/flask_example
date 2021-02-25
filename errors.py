@@ -27,9 +27,9 @@ class NotFound(BasicException):
 	default_message = 'Not found'
 
 
-class ValidationError(BasicException):
+class AuthError(BasicException):
 	status_code = 401
-	default_message = 'Validation error'
+	default_message = 'Auth error'
 
 
 class BadLuck(BasicException):
