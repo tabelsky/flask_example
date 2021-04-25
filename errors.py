@@ -39,7 +39,6 @@ class BadLuck(BasicException):
 
 @app.errorhandler(BadLuck)
 @app.errorhandler(NotFound)
-@app.errorhandler(ValidationError)
 def handle_invalid_usage(error):
 	response = jsonify(error.to_dict())
 	response.status_code = error.status_code
